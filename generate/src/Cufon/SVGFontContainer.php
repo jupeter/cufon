@@ -1,8 +1,10 @@
 <?php
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'SVGFont.php';
+namespace Cufon;
 
-class SVGFontContainer implements Iterator {
+use Cufon\SVGFont;
+
+class SVGFontContainer implements \Iterator {
 
 	/**
 	 * @var string
@@ -32,7 +34,7 @@ class SVGFontContainer implements Iterator {
 	{
 		$this->file = $file;
 
-		$this->reader = new XMLReader();
+		$this->reader = new \XMLReader();
 
 		$this->options = $options;
 	}
@@ -96,7 +98,7 @@ class SVGFontContainer implements Iterator {
 	 */
 	public function valid()
 	{
-		return $this->reader->nodeType == XMLReader::ELEMENT
+		return $this->reader->nodeType == \XMLReader::ELEMENT
 			&& $this->reader->name == 'font';
 	}
 

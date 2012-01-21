@@ -1,5 +1,7 @@
 <?php
 
+namespace Cufon;
+
 class UnicodeRange {
 
 	/**
@@ -140,10 +142,6 @@ class UnicodeRange {
 		$to = hexdec(end($stops));
 
 		return array($from, $to);
-	}
-
-}
-from, $to);
 	}
 
 }

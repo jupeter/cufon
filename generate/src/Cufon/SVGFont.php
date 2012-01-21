@@ -1,9 +1,11 @@
 <?php
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'JSEncoder.php';
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'SVGFontContainer.php';
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'UnicodeRange.php';
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'VMLPath.php';
+namespace Cufon;
+
+use Cufon\JSEncoder;
+use Cufon\SVGFontContainer;
+use Cufon\UnicodeRange;
+use Cufon\VMLPath;
 
 class SVGFont {
 
@@ -102,10 +104,10 @@ class SVGFont {
 	 * @param XMLReader $reader
 	 * @return SVGFont
 	 */
-	public function readFrom(XMLReader $reader)
+	public function readFrom(\XMLReader $reader)
 	{
 		$currentGlyphs = array(
-			' ' => new stdClass() // some fonts do not contain a glyph for space
+			' ' => new \stdClass() // some fonts do not contain a glyph for space
 		);
 
 		$currentFace = array(
@@ -128,7 +130,7 @@ class SVGFont {
 
 		do
 		{
-			if ($reader->nodeType == XMLReader::END_ELEMENT)
+			if ($reader->nodeType == \XMLReader::END_ELEMENT)
 			{
 				if ($reader->name === 'font')
 				{
@@ -138,7 +140,7 @@ class SVGFont {
 				continue;
 			}
 
-			if ($reader->nodeType != XMLReader::ELEMENT)
+			if ($reader->nodeType != \XMLReader::ELEMENT)
 			{
 				continue;
 			}
@@ -189,7 +191,7 @@ class SVGFont {
 						break;
 					}
 
-					$glyphData = new stdClass();
+					$glyphData = new \stdClass();
 
 					$glyphName = $reader->getAttribute('glyph-name');
 					$glyphPath = $reader->getAttribute('d');

@@ -1,5 +1,7 @@
 <?php
 
+namespace Cufon;
+
 class VMLPath {
 
 	/**
@@ -409,11 +411,6 @@ class VMLPath {
 			$cp2->y,
 			$toX,
 			$toY
-		);
-	}
-
-}
-		$toY
 		);
 	}
 

@@ -1,6 +1,8 @@
 <?php
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'ConversionException.php';
+namespace Cufon;
+
+use Cufon\ConversionException;
 
 class FontForgeScript {
 

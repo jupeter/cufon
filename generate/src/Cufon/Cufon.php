@@ -1,8 +1,10 @@
 <?php
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'FontForgeScript.php';
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'SVGFontContainer.php';
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'UnicodeRange.php';
+namespace Cufon;
+
+use Cufon\FontForgeScript;
+use Cufon\SVGFontContainer;
+use Cufon\UnicodeRange;
 
 class Cufon {
 

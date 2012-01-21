@@ -1,5 +1,7 @@
 <?php
 
+namespace Cufon;
+
 class JSEncoderKey implements ArrayAccess, Countable {
 
 	/**
@@ -82,10 +84,6 @@ class JSEncoderKey implements ArrayAccess, Countable {
 	public function offsetUnset($offset)
 	{
 		throw new RuntimeException('JSEncoderKey is immutable');
-	}
-
-}
-mmutable');
 	}
 
 }
