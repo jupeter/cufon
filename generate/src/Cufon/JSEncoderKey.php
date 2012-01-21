@@ -85,3 +85,7 @@ class JSEncoderKey implements ArrayAccess, Countable {
 	}
 
 }
+mmutable');
+	}
+
+}

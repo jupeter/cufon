@@ -143,3 +143,7 @@ class UnicodeRange {
 	}
 
 }
+from, $to);
+	}
+
+}

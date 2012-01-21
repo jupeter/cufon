@@ -413,3 +413,8 @@ class VMLPath {
 	}
 
 }
+		$toY
+		);
+	}
+
+}

@@ -1,5 +1,17 @@
 <?php
 
+spl_autoload_register(function($class)
+{
+    $file = __DIR__.'/src/'.strtr($class, '\\', '/').'.php';
+    if (file_exists($file)) {
+        require $file;
+        return true;
+    }
+});
+
+use Cufon\FontForgeScript;
+use Cufon\Cufon;
+
 function usage()
 {
 	echo <<<EOT
@@ -60,10 +72,6 @@ php convert.php Amaze/*.ttf -u "U+??" > Amaze.font.js
 
 EOT;
 }
-
-set_include_path(get_include_path() . PATH_SEPARATOR . dirname(__FILE__));
-
-require 'lib/Cufon.php';
 
 $filters = array(
 	'family' => array(

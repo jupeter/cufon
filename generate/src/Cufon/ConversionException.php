@@ -2,3 +2,5 @@
 
 class ConversionException extends RuntimeException {
 }
+timeException {
+}
