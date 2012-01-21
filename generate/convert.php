@@ -1,5 +1,9 @@
 <?php
 
+if (version_compare(PHP_VERSION, '5.3.0') < 0) {
+    echo 'Your PHP version is ' . PHP_VERSION . ' (required at least 5.3.0).';
+}
+
 spl_autoload_register(function($class)
 {
     $file = __DIR__.'/src/'.strtr($class, '\\', '/').'.php';
