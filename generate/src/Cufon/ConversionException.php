@@ -2,5 +2,5 @@
 
 namespace Cufon;
 
-class ConversionException extends RuntimeException {
+class ConversionException extends \RuntimeException {
 }
