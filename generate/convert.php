@@ -16,6 +16,7 @@ spl_autoload_register(function($class)
 
 use Cufon\FontForgeScript;
 use Cufon\Cufon;
+use Cufon\UnicodeRange;
 
 function usage()
 {
